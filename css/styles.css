@@ -1,0 +1,21 @@
+*{
+    padding: 0;
+    margin: 0;
+
+}
+.nav{
+    background-color: red;
+    padding: 1em;
+}
+.nav ul {
+display: flex;
+list-style: none;
+
+justify-content: flex-end;
+}
+.nav ul li a{
+    font-size: 1.5em;
+    padding: 1em;
+    color: white;
+    text-decoration: none;
+}
