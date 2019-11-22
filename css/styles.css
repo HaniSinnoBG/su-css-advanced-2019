@@ -1,10 +1,12 @@
+---
+---
 *{
     padding: 0;
     margin: 0;
 
 }
 .nav{
-    background-color: red;
+    
     padding: 1em;
 }
 .nav ul {
@@ -18,4 +20,21 @@ justify-content: flex-end;
     padding: 1em;
     color: white;
     text-decoration: none;
+}
+.header {
+
+    margin-top: 1em;
+    margin:1em   auto;
+    background-image: url('{{site.base-url}}/images/cover.jpg');
+    color: white;
+    width: 70%;
+    border-radius: 0.5em;
+    padding-bottom: 4em;
+    box-shadow: 1em black;
+
+}
+.bottom-nav{
+    display: flex;
+    justify-content: center;
+    padding: 7em;
 }
