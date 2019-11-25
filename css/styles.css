@@ -1,15 +1,30 @@
 ---
 ---
+@keyframes slideInFromLeft {
+    0% {
+      transform: translateX(-100%);
+    }
+    100% {
+      transform: translateX(0);
+    }
+  }
+  
 *{
     padding: 0;
     margin: 0;
 
+    
+
+}
+html{
+    background-color: rgb(207, 207, 207);
 }
 .nav{
     
-    padding: 1em;
+    
 }
 .nav ul {
+    animation: 1s ease-out 0s 1 slideInFromLeft;
 display: flex;
 list-style: none;
 
@@ -17,24 +32,69 @@ justify-content: flex-end;
 }
 .nav ul li a{
     font-size: 1.5em;
-    padding: 1em;
-    color: white;
+    padding: 0.5em;
+    color: black;
     text-decoration: none;
+    
 }
+.nav ul li a:hover{
+    background-color: black;
+
+    color: white;
+    transition: 1s;
+    opacity: 80%;
+    border-radius: 0.1em;
+
+}
+
 .header {
 
     margin-top: 1em;
     margin:1em   auto;
-    background-image: url('{{site.base-url}}/images/cover.jpg');
+
     color: white;
-    width: 70%;
+  
     border-radius: 0.5em;
-    padding-bottom: 4em;
-    box-shadow: 1em black;
+
+    
 
 }
-.bottom-nav{
+.cover{
+
+
+    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.2)), url('{{site.base-url}}/images/cover.jpg') no-repeat ;
+  background-size: cover;
+  color: white;
+
     display: flex;
     justify-content: center;
-    padding: 7em;
+    padding: 9em;
+    font-size: 1.5em;
+
+}
+.cover h1{
+        
+}
+.main-info{
+    width: 90%;
+    margin:  auto;
+    font-size: 1.4em;
+    background-image: url("{{site.base-url}}/images/background.jpg");
+    margin: 2em;
+}
+.div1{
+
+    width: 60%;
+    background-color: white;
+    padding: 1em;
+    border-radius: 0.3em;
+    opacity: 80%;
+
+}
+.cover{
+    
+}
+.content{
+    background-image: url("{{site.base-url}}/images/background.jpg");
+
 }
