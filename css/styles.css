@@ -66,8 +66,8 @@ justify-content: flex-end;
   background-size: cover;
   color: white;
 
-    display: flex;
-    justify-content: center;
+    
+    
     padding: 9em;
     font-size: 1.5em;
 
@@ -76,25 +76,37 @@ justify-content: flex-end;
         
 }
 .main-info{
-    width: 90%;
+    
     margin:  auto;
     font-size: 1.4em;
     background-image: url("{{site.base-url}}/images/background.jpg");
-    margin: 2em;
+   
 }
 .div1{
 
-    width: 60%;
+    
     background-color: white;
-    padding: 1em;
+    
     border-radius: 0.3em;
-    opacity: 80%;
+    grid-area: main;
 
 }
 .cover{
-    
+    grid-area: header;
 }
-.content{
-    background-image: url("{{site.base-url}}/images/background.jpg");
 
+.div2{
+    grid-area: nav;
+    background-color: white;
+    
+    border-radius: 0.3em;
+}
+.wrapper{
+    display: grid;
+    grid-template-columns: repeat(9,1fr) ;
+    grid-template-areas: 
+      "header  header header  header header  header header  header header "
+      " . main main main main     nav nav nav .  ";
+      grid-gap: 1em;
+    
 }
