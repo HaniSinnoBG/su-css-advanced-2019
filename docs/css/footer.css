@@ -1,0 +1,27 @@
+.footer{
+    background-color: black;
+    margin-top: 2em ;
+}
+.footer .nav ul{
+    display: flex;
+    justify-content: center;
+    
+}
+.footer .nav ul li{
+    list-style: none;
+    padding: 2em;
+}
+.footer .nav ul li a{
+    text-decoration: none;
+    color: whitesmoke;
+    font-size: 1.1em;
+    
+}
+.footer p{
+    color: white;
+    text-align: center;
+    padding: 1em;
+}
+hr{
+    size: 2em;
+}

@@ -1,6 +1,3 @@
----
----
-
 html{
     font-family: "Open Sans", sans-serif;
 }
@@ -8,7 +5,7 @@ html{
 .cover{
 
 
-    background: linear-gradient(rgba(255, 255, 255, 0.329), rgba(0, 0, 0, 0.2)), url('{{site.base-url}}/images/cover.jpg') no-repeat ;
+    background: linear-gradient(rgba(255, 255, 255, 0.329), rgba(0, 0, 0, 0.2)), url('/images/cover.jpg') no-repeat ;
   background-size: cover;
   color: white;
 
@@ -29,7 +26,7 @@ html{
     
     margin:  auto;
     font-size: 1.4em;
-    background-image: url("{{site.base-url}}/images/background.jpg");
+    background-image: url("/images/background.jpg");
    
 }
 .div1{

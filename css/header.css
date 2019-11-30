@@ -1,0 +1,42 @@
+
+.header .nav{
+     
+    
+}
+.header .nav ul {
+    animation: 1s ease-out 0s 1 slideInFromLeft;
+display: flex;
+list-style: none;
+
+justify-content: flex-end;
+}
+.header .nav ul li a{
+    font-size: 1.5em;
+    padding: 0.5em;
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    
+}
+.header .nav ul li a:hover{
+    background-color: rgb(219, 219, 219);
+
+    color: rgb(0, 0, 0);
+    transition: 0.5s;
+   
+    border-radius: 0.1em;
+
+}
+
+.header {
+
+    padding-top: 1em;
+    padding-bottom: 1em;
+    padding: 2em   auto;
+
+    color: white;
+background-color: rgb(41, 41, 41);
+    
+
+    
+
+}
