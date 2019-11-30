@@ -4,7 +4,11 @@ html{
 
 .cover{
 
+    background: linear-gradient(rgba(255, 255, 255, 0.329), rgba(0, 0, 0, 0.2)), url("/su-css-advanced-2019/images/cover.jpg") no-repeat ;
+    background-size: cover;
+    color: white;
 
+    
     padding: 9em;
     font-size: 1.5em;
 }
