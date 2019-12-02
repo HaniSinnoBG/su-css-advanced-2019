@@ -1,13 +1,27 @@
 <div class="header">
-        <div class="nav">
-            <ul>
-                    <li><a href="{{base-url}}/index.html">Home</a></li>
-                    <li><a href="{{base-url}}/History.html">History</a></li>
-                    
-                    
-                
-                </ul>
-        </div>
-       
-      
+        <nav class="site-nav location-{{ include.location }}">
+
+                        <ul>
+
+                                        {% assign navigation_pages = site.pages %}
+                                    
+                                        {% for current_page in navigation_pages %}
+                                            {% if current_page.title %}
+                                    
+                                            <li class="page-title-{{ current_page.title | slugify }}{% if current_page.url == page.url %} current-page{% endif %}">
+                                                <a href="{{ site.baseurl }}{{ current_page.url }}">{{ current_page.title }}</a>
+                                            </li>
+                                            {% endif %}
+                                        {% endfor %}
+                         </ul>
+                                    
+                                        {% if include.location == 'header' %}
+                                        
+                                        {% endif %}
+                                    
+   
+
+    
+        
+  
 </div>
