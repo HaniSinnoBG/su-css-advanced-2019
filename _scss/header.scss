@@ -32,6 +32,8 @@ background-color: rgb(41, 41, 41);
                list-style: none;
                padding: 0.5em;
                
+
+               
                 color: white;
                
                &:hover{
@@ -40,12 +42,12 @@ background-color: rgb(41, 41, 41);
                 color: rgb(0, 0, 0);
                 transition: 0.5s;
                
-                border-radius: 0.1em;
+                
 
                    }
                 a{
                     font-size: 1.5em;
-                    
+                    margin: 1em;
                     color: rgb(255, 255, 255);
                     text-decoration: none;
                   
