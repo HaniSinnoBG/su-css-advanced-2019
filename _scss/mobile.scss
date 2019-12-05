@@ -1,0 +1,28 @@
+@media (max-width: 1000px){
+    body {
+        background-color: greenyellow;
+      }
+.index-wrapper{
+    grid-template-columns: repeat(7,1fr) ;
+    grid-template-areas: 
+      "header  header header  header header header header  "
+      " . main main main  main main .  "
+      " . embed embed embed embed embed .  ";
+    }
+    .box{
+        margin-bottom: 5em; 
+        min-height: 20em;
+    }
+
+    .site-nav{
+        display: block;
+        
+        margin: auto;
+    }
+}
+@media (max-width: 600px) {
+    body {
+      background-color: lightblue;
+    }
+    
+  }
