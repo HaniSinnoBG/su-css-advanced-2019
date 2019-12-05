@@ -7,7 +7,8 @@ html{
     color: white;
     z-index: 0;
     overflow: hidden;
-    padding: 9em;
+    padding-top: 9em;
+    padding-bottom:9em ;
     font-size: 1.5em;
     text-align: center;  
     grid-area: header;
@@ -16,9 +17,12 @@ html{
     background: linear-gradient(rgba(255, 255, 255, 0.158), rgba(0, 0, 0, 0.466)), url("https://images.unsplash.com/photo-1480796927426-f609979314bd?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80") no-repeat ;
     background-size: cover !important;  
     }
+
     .home{
+        
         background: linear-gradient(rgba(255, 255, 255, 0.329), rgba(0, 0, 0, 0.2)), url("../images/cover.jpg") no-repeat ;
         background-size: cover !important;
+        background-color: rgba(19, 41, 47, 0.8);
     }
 
 .box{
@@ -30,6 +34,7 @@ html{
     border:solid transparent;
     transform: scale(1);
     transition: 0.5s;
+    z-index: 3;
     &:hover {
         background-image: linear-gradient(to right, #ececec, #f1f1f1, #f5f5f5, #fafafa, #ffffff);
         transform: scale(1.02);
@@ -73,6 +78,7 @@ html{
 
 .embed{
     grid-area: embed;
+    
 }
 .wrapper{
     display: grid;
