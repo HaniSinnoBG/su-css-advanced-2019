@@ -1,3 +1,5 @@
+@import "responsive.scss";
+
 .footer{
     padding: 1em;
     text-align: center;
@@ -43,4 +45,15 @@ h4{
         color: rgb(165, 165, 165);
 font-size: 1.5em;
     }   
+}
+@include bp(phone){
+    .footer{
+        font-size: 0.8em;
+        .nav{
+            display: block;
+            .address{
+                margin: 2.5em;
+            }
+        }
+}
 }
