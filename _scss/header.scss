@@ -1,8 +1,4 @@
-.site-header{
-    @include break-p(mobile){
-        display: none;
-    }
-}
+
 .title{
     a{
     color: white;
@@ -23,6 +19,7 @@
     justify-content: space-between;
     color: white;
     background-color: rgb(41, 41, 41);
+
 
     
     
