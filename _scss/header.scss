@@ -1,16 +1,59 @@
+$breakpoints: (
+  'phone':      ( max-width:  600px ),
+  'tablet':     ( max-width:  900px ),
+  'mobile':     ( max-width: 1024px ),
+  'desktop':    ( min-width: 1025px ),
+  'large':      ( min-width: 1600px ),
+) !default;
+
+/// Mixin to manage responsive breakpoints
+/// @author Hugo Giraudel
+/// @param {String} $breakpoint - Breakpoint name
+/// @require $breakpoints
+
+@mixin bp($breakpoint) {
+
+    // If the key exists in the map
+    @if map-has-key($breakpoints, $breakpoint) {
+        // Prints a media query based on the value
+        @media #{inspect(map-get($breakpoints, $breakpoint))} {
+            @content;
+        }
+    }
+
+    // If the key doesn't exist in the map
+    @else {
+        @warn "Unfortunately, no value could be retrieved from `#{$breakpoint}`. "
+            + "Available breakpoints are: #{map-keys($breakpoints)}.";
+    }
+}
+
+.nav-bar{
+@include bp(mobile){
+    display: none;
+}
+}
+
+.current-page{    
+    opacity: 70%;
+    background-color: rgb(97, 0, 0);
+}
 
 .title{
+    padding: 0.5em;
+    @include bp(mobile){
+        
+        display: flex;
+        justify-content: center;
+    }
+    background-color: rgb(41, 41, 41);
+    
     a{
-    color: white;
-    text-decoration: none;
-    font-size: 1.5em;
-   
+        color: white;
+        text-decoration: none;
+        font-size: 1.5em;
     }
-     &:hover
-    {
-        transform: scale(1.1);
-        transition: 0.5s;
-    }
+    
 
 }
 .site-nav{
@@ -21,8 +64,6 @@
     background-color: rgb(41, 41, 41);
 
 
-    
-    
     ul{
         animation: 0.5s ease-out 0s 1 slideInFromTop;
         display: flex;
@@ -49,10 +90,65 @@
     } 
 }
         
-.current-page{    
-    opacity: 70%;
-    background-color: rgb(97, 0, 0);
-}
-
 
        
+.nav-toggle-label{
+    display: flex;
+    justify-content: center;
+    background-color: rgb(41, 41, 41);
+    color: white;
+    font-size: 2em;
+    padding: 0.5em;
+    
+}
+
+@include bp(mobile){
+    .site-nav ul{
+        display:block !important;
+        
+    }
+    .nav-bar{
+        position: absolute;
+        z-index: 3;
+        right: 0;
+
+    }
+}
+.nav-toggle{
+    position: absolute;
+    pointer-events: none;
+    opacity: 0;
+
+    &:checked + .site .site-header .nav-bar{
+        
+        @include bp(mobile){
+            display:block;
+
+        }
+    }
+    &-label{
+        @include bp(desktop){
+            display: none;
+        }
+    }
+}
+.site-header{
+    display: flex;
+    justify-content: space-between;
+    background-color: rgb(41, 41, 41);
+
+    @include bp(phone){
+        flex-direction: column;
+        .nav-bar{
+            position: relative;
+        }
+        .site-nav{
+            text-align: left;
+        }
+        .nav-toggle-label{
+            text-align: left;
+        }
+
+    }
+
+}

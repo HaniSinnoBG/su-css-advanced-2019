@@ -6,10 +6,17 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <script src="https://kit.fontawesome.com/6ec0e93207.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="{{ site.baseurl }}/css/site.css">
-    <title>title</title>
+    
 </head>
-<body>
-    {% include header/header.html navclass="nav"%}
+<body class ="page-{{ page.title | slugify}}">
+<input type="checkbox" id="nav-toggle" class="nav-toggle">
+    <div class="site">
+        <header class="site-header">
+                <div class="title"><h1><a href="">Kendama</a></h1></div>
+            {% include header/header.html navclass="nav"%}
+        </header>
+    </div>
+    
     {{content}}
     {% include footer/footer.html navclass="nav"%}
     
