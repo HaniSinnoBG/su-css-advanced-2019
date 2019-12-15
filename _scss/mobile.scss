@@ -1,4 +1,5 @@
-@media (max-width: 1024px){
+@import "responsive.scss";
+@include bp(mobile){
 body {
 
 }
@@ -67,7 +68,7 @@ body {
 
 
 }
-@media (max-width: 600px) {
+@include bp(phone){
     body {
       
     }
